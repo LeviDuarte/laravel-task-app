@@ -53,12 +53,12 @@
 - Add a label for "Materials Required" (e.g., <label for="materials_required">Materials Requ
 - The label's 'for' should match the input's 'id'.
 - Create an <input type="text"> for name="materials_required".
-2/19/25, 12:49 PM project-day2-instructions
-
-file:///C:/Users/ryan.morales/AppData/Local/Temp/crossnote2025119-148344-1k88sz5.8bivf.html 11/12
-
 - Add a placeholder like "e.g., Trash Bags, Broom".
 -->
+<label for="materials_required" class="block mb-1">Materials Required (Optional)</label>
+<input type="text" name="materials_required" id="materials_required"
+class="w-full border rounded px-3 py-2"
+placeholder="e.g., Trash Bags, Broom">
 </div>
 {{-- Deadline (Optional) --}}
 <div class="mb-4">
@@ -67,6 +67,10 @@ file:///C:/Users/ryan.morales/AppData/Local/Temp/crossnote2025119-148344-1k88sz5
 - The label's 'for' should match the input's 'id'.
 - Create an <input type="datetime-local"> for name="deadline".
 -->
+<label for="deadline" class="block mb-1">Deadline (Optional)</label>
+<input type="datetime-local" name="deadline" id="deadline"
+class="w-full border rounded px-3 py-2">
+
 </div>
 {{-- Priority (Optional) --}}
 <div class="mb-4">
@@ -76,6 +80,13 @@ file:///C:/Users/ryan.morales/AppData/Local/Temp/crossnote2025119-148344-1k88sz5
 - Create a <select> for name="priority".
 - Provide <option> items like "Low (1)", "Medium (2)", "High (3)".
 -->
+<label for="priority" class="block mb-1">Priority (Optional)</label>
+<select name="priority" id="priority" class="w-full border rounded px-3 py-2">
+<option value="">Select Priority</option>
+<option value="1">Low</option>
+<option value="2">Medium</option>
+<option value="3">High</option>
+</select>
 </div>
 {{-- Category (Optional) --}}
 <div class="mb-4">
@@ -85,6 +96,10 @@ file:///C:/Users/ryan.morales/AppData/Local/Temp/crossnote2025119-148344-1k88sz5
 - Create an <input type="text"> for name="category".
 - Add a placeholder like "e.g., chores, work, health".
 -->
+<label for="category" class="block mb-1">Category (Optional)</label>
+<input type="text" name="category" id="category"
+class="w-full border rounded px-3 py-2"
+placeholder="e.g., chores, work, health">
 </div>
 {{-- Submit and Cancel Buttons --}}
 <div class="flex gap-4">
