@@ -13,15 +13,15 @@ class TaskController extends Controller {
         if (!empty($search)) {
             $query->where(function($q) use ($search) {
                 $q->where('task_name', 'like', '%'.$search.'%')
-                  ->orWhere('task_location', 'like', '%'.$search.'%')
-                  ->orWhere('category', 'like', '%'.$search.'%')
-                  ->orWhere('materials_required', 'like', '%'.$search.'%');
+                ->orWhere('task_location', 'like', '%'.$search.'%')
+                ->orWhere('category', 'like', '%'.$search.'%')
+                ->orWhere('material_required', 'like', '%'.$search.'%');
             });
         }
 
         switch ($sort) {
-            case 'deadline':
-                $query->orderBy('deadline', 'asc');
+            case 'task_location':
+                $query->orderBy('task_location', 'asc');
                 break;
             case 'task_name':
                 $query->orderBy('task_name', 'asc');
@@ -37,7 +37,7 @@ class TaskController extends Controller {
         $tasks = $query->get(); // or ->paginate() if you want pagination
         return view('tasks.index', compact('tasks', 'search', 'sort'));
     }
-        /**
+    /**
     * Show the form for creating a new resource.
     */
     public function create() {
@@ -47,15 +47,7 @@ class TaskController extends Controller {
     * Store a newly created resource in storage.
     */
     public function store(Request $request) {
-        $validated = $request->validate([
-            'task_name' => 'required|string|max:255',
-            'task_location' => 'nullable|string|max:255',
-            'time_complexity' => 'required|integer|min:1|max:5',
-            'materials_required' => 'nullable|string',
-            'deadline' => 'nullable|date',
-            'priority' => 'nullable|integer|min:1|max:3',
-            'category' => 'nullable|string|max:255',
-        ]);
+        $validated = $request->validate(Task::validationRules());
         Task::create($validated);
         return redirect()->route('tasks.index')->with('success', 'Task created successfully!');
     }
@@ -76,15 +68,7 @@ class TaskController extends Controller {
     * Update the specified resource in storage.
     */
     public function update(Request $request, string $id) {
-        $validated = $request->validate([
-            'task_name' => 'required|string|max:255',
-            'task_location' => 'nullable|string|max:255',
-            'time_complexity' => 'required|integer|min:1|max:255',
-            'materials_required' => 'nullable|string',
-            'deadline' => 'nullable|date',
-            'priority' => 'nullable|integer|min:1|max:3',
-            'category' => 'nullable|string|max:255',
-        ]);
+        $validated = $request->validate(Task::validationRules());
         $task = Task::findOrFail($id);
         $task->update($validated);
         return redirect()->route('tasks.index')->with('success', 'Task updated successfully!');
@@ -93,8 +77,8 @@ class TaskController extends Controller {
     * Remove the specified resource from storage.
     */
     public function destroy(string $id){
-    $task = Task::findOrFail($id);
-    $task->delete();
-    return redirect()->route('tasks.index')->with('success', 'Task deleted successfully!');
+        $task = Task::findOrFail($id);
+        $task->delete();
+        return redirect()->route('tasks.index')->with('success', 'Task deleted successfully!');
     }
 }

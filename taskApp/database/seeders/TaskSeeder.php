@@ -18,7 +18,7 @@ class TaskSeeder extends Seeder
             'task_location' => 'Kitchen',
             'time_complexity' => 1,
             // (1 => ~10 min, 2 => ~30 min, etc.)
-            'materials_required'=> 'Trash bags',
+            'material_required'=> 'Trash bags',
             'deadline' => '2025-02-21 20:00:00',
             'priority' => 2,
             // (1 => low, 2 => medium, 3 => high)
@@ -29,7 +29,7 @@ class TaskSeeder extends Seeder
             'task_location' => 'Store',
             'time_complexity' => 3,
             // (1 => ~10 min, 2 => ~30 min, etc.)
-            'materials_required'=> 'Money',
+            'material_required'=> 'Money',
             'deadline' => '2025-02-20 10:00:00',
             'priority' => 3,
             // (1 => low, 2 => medium, 3 => high)
@@ -40,7 +40,7 @@ class TaskSeeder extends Seeder
             'task_location' => 'Kitchen',
             'time_complexity' => 1,
             // (1 => ~10 min, 2 => ~30 min, etc.)
-            'materials_required'=> 'sponge',
+            'material_required'=> 'sponge',
             'deadline' => '2025-02-22 16:00:00',
             'priority' => 1,
             // (1 => low, 2 => medium, 3 => high)
@@ -51,7 +51,7 @@ class TaskSeeder extends Seeder
             'task_location' => 'Bedroom',
             'time_complexity' => 2,
             // (1 => ~10 min, 2 => ~30 min, etc.)
-            'materials_required'=> 'Laptop',
+            'material_required'=> 'Laptop',
             'deadline' => '2025-02-21 23:59:59',
             'priority' => 1,
             // (1 => low, 2 => medium, 3 => high)
@@ -62,7 +62,7 @@ class TaskSeeder extends Seeder
             'task_location' => 'Gym',
             'time_complexity' => 3,
             // (1 => ~10 min, 2 => ~30 min, etc.)
-            'materials_required'=> 'Weights',
+            'material_required'=> 'Weights',
             'deadline' => '2025-02-20 16:00:00',
             'priority' => 3,
             // (1 => low, 2 => medium, 3 => high)
