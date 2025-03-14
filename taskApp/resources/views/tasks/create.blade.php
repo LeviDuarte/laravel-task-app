@@ -58,12 +58,16 @@
 
     </div>
     <div class="flex gap-4">
+
     <button type="submit"
-    class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+    class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 hover:animate-bounce">
     Create Task
     </button>
+
+
+
     <a href="{{ url('/') }}"
-    class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
+    class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 hover:animate-bounce">
     Cancel
     </a>
     </div>

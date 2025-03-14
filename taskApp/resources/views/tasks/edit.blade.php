@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-<div class="bg-white p-4">
+<div class="bg-white p-4 rounded">
 
 <h1 class="underline">Edit Task</h1>
 <form action="{{ route('tasks.update', $task->id) }}" method="POST">
@@ -64,13 +64,13 @@
     <div style="color: red;">{{ $message }}</div>
     @enderror
     </div>
-        <button type="submit" class="p-1 text-white bg-green-500 hover:bg-green-600">Update Task</button>
+        <button type="submit" class="p-1 text-white bg-green-500 hover:bg-green-600 rounded">Update Task</button>
 </form>
     <br>
 <form action="{{ route('tasks.destroy', $task->id) }}" method="POST">
     @csrf
     @method('DELETE')
-    <button type="submit" class="p-1 bg-red-500 hover:bg-red-600">
+    <button type="submit" class="p-1 bg-red-500 hover:bg-red-600 rounded">
     Delete Task
     </button>
 </form>

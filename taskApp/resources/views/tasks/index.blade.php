@@ -38,20 +38,23 @@ Search & Sort
     </li>
 <!-- Link to the show page -->
     <li>
-         <a href="{{ route('tasks.show', $task->id) }}" class="text-red-500 underline m-auto">
+         <a href="{{ route('tasks.show', $task->id) }}" class="text-red-500 hover:text-red-700 underline m-auto">
          View
         </a>
     </li>
     <br>
 </div>
 @empty
-<li>No tasks yet. Go plan something, you bum.</li>
+<li class="animate-bounce">No tasks yet. Go plan something, you bum.</li>
 @endforelse
 </ul>
+
 <div class="mt-4">
+
 <a href="{{ route('tasks.create') }}"
 class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
 Create a New Task
 </a>
+
 </div>
 @endsection

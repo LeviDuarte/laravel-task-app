@@ -10,7 +10,7 @@
 <body class='bg-[#088F8F] font-mono'>
     <!-- Navbar Content-->
     <nav class="bg-white shadow p-4">
-        <h1 class="text-xl font-bold flex items-center justify-center font-mono text-4xl text-[#097969]">My Task App</h1>
+        <h1 class="text-xl font-bold flex items-center justify-center font-serif text-6xl text-[#097969]">My Task App</h1>
     </nav>
 
     <main class="p-4 bg-[#088F8F]">

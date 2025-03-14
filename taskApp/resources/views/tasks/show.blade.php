@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-<div class="bg-white p-4">
+<div class="bg-white p-4 rounded">
 
 <h1 class="underline font-bold">Task Details</h1>
 <div>
@@ -25,9 +25,10 @@
 <div>
     <strong>Category:</strong> {{ $task->category }}
 </div>
+
 <div style="margin-top:20px;">
-<a href="{{ route('tasks.edit', $task->id) }}" class="btn btn-primary border border-black bg-blue-500 hover:bg-blue-600 p-2">Edit Task</a>
-<a href="{{ route('tasks.index') }}" class="btn btn-secondary border border-black bg-red-500 p-2 hover:bg-red-600">Back to List</a>
+<a href="{{ route('tasks.edit', $task->id) }}" class="btn btn-primary border border-black bg-blue-500 hover:bg-blue-600 p-2 rounded">Edit Task</a>
+<a href="{{ route('tasks.index') }}" class="btn btn-secondary border border-black bg-red-500 p-2 hover:bg-red-600 rounded">Back to List</a>
 </div>
 
 </div>
